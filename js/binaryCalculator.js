@@ -1,7 +1,7 @@
 let exp = 0;
 let operator;
 
-function resetRes(value){
+function resetRes(){
     document.querySelector('#res').innerHTML = "" ;
     exp = 0 ;
     operator = "" ;
@@ -35,13 +35,15 @@ function splitExp(exp , operator){
     if(operation !== ""){
         //storing result after converting decimal integer to binary result
         result = Math.floor(calculator(op1, op2, operation)).toString(2) 
-        console.log("it's me "+result)
     }
 
     resetRes();
     updateRes(result);
 }
 
+function calculator(num1, num2, operator){
+    return operator(num1, num2) ;
+}
 
 function add(num1, num2){
     return num1 + num2;
@@ -59,11 +61,8 @@ function divide(num1, num2){
     return num1 / num2;
 }
 
-function calculator(num1, num2, operator){
-    return operator(num1, num2) ;
-}
 
-
+//Adding all listeners
 document.querySelector('#btnEql').addEventListener('click', function(){
     exp = document.querySelector('#res').innerHTML
     console.log(exp)

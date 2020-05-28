@@ -1,0 +1,2 @@
+# Simple Binary Calulator
+Solution for [Hackerrank Binary Calculator Challenge](https://www.hackerrank.com/challenges/js10-binary-calculator) from [10 Days of JavaScript](https://www.hackerrank.com/domains/tutorials/10-days-of-javascript)
