@@ -32,14 +32,10 @@ function splitExp(exp , operator){
 
     let result = ""
 
-    if(operation !== divide && operation !== ""){
+    if(operation !== ""){
         //storing result after converting decimal integer to binary result
-        result = calculator(op1, op2, operation).toString(2) 
+        result = Math.floor(calculator(op1, op2, operation)).toString(2) 
         console.log("it's me "+result)
-    }
-    else if(operation === divide){
-        result = Math.floor(calculator(op1, op2, operation)).toString(2)
-        console.log(result)
     }
 
     resetRes();
